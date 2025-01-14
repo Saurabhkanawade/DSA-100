@@ -22,5 +22,5 @@ func isPrimeNumber(n int) string {
 }
 
 func main() {
-	fmt.Println(isPrimeNumber(4))
+	fmt.Println(isPrimeNumber(11))
 }
