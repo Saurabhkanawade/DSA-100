@@ -33,15 +33,14 @@ func ArmstrongNumber(n int) string {
 }
 
 func ArmstrongNumber2(n int) string {
-	fmt.Println("g")
 	temp := n
-	_ = FindDigit(n)
+	totalDigit := FindDigit(n)
 	var sum int
 
 	for temp != 0 {
 		//find last digit
 		lastDigit := temp % 10
-		sum += lastDigit * lastDigit * lastDigit
+		sum += Sum(sum, totalDigit, lastDigit)
 		temp /= 10
 	}
 
@@ -49,6 +48,15 @@ func ArmstrongNumber2(n int) string {
 		return fmt.Sprintf("The given no is Armstrong")
 	}
 	return fmt.Sprintf("The given no is NOT Armstrong")
+}
+
+func Sum(sum, totalDigit, lastDigit int) int {
+	sum = 1
+	for i := 0; i < totalDigit; i++ {
+		sum *= lastDigit
+	}
+
+	return sum
 }
 
 func main() {
