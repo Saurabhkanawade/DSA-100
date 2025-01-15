@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// FindDigit number
 func FindDigit(n int) int {
 	count := 0
 	for n != 0 {
