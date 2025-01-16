@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//pipeline example with goroutine / concurrency
+// pipeline example with goroutine / concurrency
 func numsToChannel(num []int) <-chan int {
 	newChan := make(chan int)
 
