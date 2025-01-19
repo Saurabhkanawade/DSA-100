@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Notification interface {
 	SendNotification(message string) string
@@ -61,4 +63,5 @@ func main() {
 		return
 	}
 	fmt.Println(notification.SendNotification("Hello via push!"))
+
 }
