@@ -4,4 +4,4 @@ WORKDIR ./app
 
 COPY go.mod mod.sum ./
 
-CMD ["./app"]
+CMD ["./app"]hjk
