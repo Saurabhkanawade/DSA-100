@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//channel without the waitgroup
+// channel without the waitgroup
 func main() {
 
 	myChannel := make(chan string, 1)
