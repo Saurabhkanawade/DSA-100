@@ -36,6 +36,11 @@ func (Divide) Calculator(a, b int) {
 
 func main() {
 
+	ops := []Operation{
+		Addition{},
+	}
+	ops[0].Calculator(3, 4)
+
 	op := []Operation{
 		Addition{},
 		Subtraction{},

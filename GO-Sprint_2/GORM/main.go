@@ -2,10 +2,18 @@ package main
 
 import "fmt"
 
+type Person struct {
+	name string
+	age  int
+}
+
 func main() {
-	var i interface{} = "hello"
+	var p interface{}
+	p = Person{name: "Alice", age: 25}
 
-	s := i.(string)
+	// Type assertion to access the name field
+	fmt.Println(p.(Person))
 
-	fmt.Println(s)
+	// Type assertion to access the age field
+	fmt.Println(p.(Person).age)
 }
